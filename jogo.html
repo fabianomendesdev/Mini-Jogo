@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Jogo para testar seu conhecimento</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="_css/style.css">
+		<link rel="shortcut icon" href="_imagens/icon.ico">
+		<script src="_js/script.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="div_opc" class="alinharCentro" style="color: white;">
+			
+			<input type="button" value="Ciências da Natureza" onclick="jg(1)">
+
+			<input type="button" value="Ciências Humanas" onclick="jg(2)">
+
+			<input type="button" value="Linguagens e Códigos" onclick="jg(3)">
+
+			<input type="button" value="Matemática" onclick="jg(4)">
+
+			<input type="button" value="Aleatório" onclick="jg(5)">
+
+		</div>
+
+		<div id="div_quest" class="alinharCentro">
+			
+			<div id="divInpText">
+
+				<textarea id="inpText" readonly cols="auto" rows="auto" scroll=no></textarea>
+
+			</div>	
+
+			<div id="div_op">
+				<div id="divOpcA" class="opcs">
+					<div class="rad">
+						<input type="radio" id="rad1" name="N" onclick="qst(1)">
+					</div>
+
+					<div class="f">
+						<label>
+							<input type="text" class="qstt" id="qst1" class="alinharCentro" readonly rows="2" cols="auto">
+						</label>
+					</div>
+				</div>
+
+				<div id="divOpcB" class="opcs">
+					<div class="rad">
+						<input type="radio" id="rad2" name="N" onclick="qst(2)">
+					</div>
+
+					<div class="f">
+						<label>
+							<input type="text" class="qstt" id="qst2" readonly>
+						</label>
+					</div>
+				</div>
+
+				<div id="divOpcC" class="opcs">
+					<div class="rad">
+						<input type="radio" id="rad3" name="N" onclick="qst(3)">
+					</div>
+
+					<div class="f">
+						<label>
+							<input type="text" class="qstt" id="qst3" readonly>
+						</label>
+					</div>
+				</div>
+
+				<div id="divOpcD" class="opcs">
+					<div class="rad">
+						<input type="radio" id="rad4" name="N" onclick="qst(4)">
+					</div>
+
+					<div class="f">
+						<input type="text" class="qstt" id="qst4" readonly>
+					</div>
+				</div>
+
+				<div id="divOpcE" class="opcs">
+					<div class="rad">
+						<input type="radio" id="rad5" name="N" onclick="qst(5)">
+					</div>
+
+					<div class="f">
+						<input type="text" class="qstt" id="qst5" readonly>
+					</div>
+				</div>
+
+				<input type="button" value="Proximo" onclick="op(),co()" Class="btnPad" id="btnPro">
+				<input type="button" value="Enviar" onclick="fim(),co()" Class="btnPad" id="btnEnv">
+
+			</div>
+
+		</div>
+
+		<div class="alinharCentro" id="fim">
+			<div id="div_centro">
+
+				<div id="div_text">
+					<h1>Final</h1>
+
+					<input type="text" id="agra" readonly>
+
+					<p>Total de acertos: </p> <input type="text" class="inFim" id="inAcer" readonly>
+					<p>Total de erros: </p>	<input type="text" class="inFim" id="inErr" readonly>
+					<p>Pontuação: </p> <input type="text" class="inFim" id="inPont" readonly>
+
+				</div>
+
+				<input type="button" value="Inicio" class="btnPad" onclick="ini()">	
+
+			</div>
+		</div>
+
+		<center>
+			<span id="final"><p>Desenvolvido By Fabiano Mendes | 2º Web "B"</p></span>
+		</center>
+	</body>
+</html>

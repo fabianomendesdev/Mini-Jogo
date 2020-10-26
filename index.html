@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+
+		<title>Jogo para testar seu conhecimento</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="_imagens/icon.ico">
+	
+		<style type="text/css">
+			
+			body {
+				padding: 0px;
+				margin: 0px;
+				background-color: #2F4F4F;
+			}
+
+
+			#form_inicio input[type = "text"]:focus , form input[type = "email"]:focus{
+				width: 100%;
+				border-color: #00BFFF;
+
+			}
+			
+
+			#form_inicio {
+				width: 75%;
+				height: 75%;
+				background-color: #191919; 
+				border-radius: 24px;
+				border: solid 2px #2ecc71;
+			}
+
+			#form_inicio input[type = "text"], form input[type = "email"] {
+				width: 75%;
+				height: 20%;
+				display: block;
+				background-color: transparent;
+				font-size: 160%;
+				text-align: center;
+				align-items: center;
+				margin: 10% auto;
+				color: white;
+				border-radius: 24px;
+				text-align: center;
+				outline: none;
+				transition: 0.2s;
+				border-color: #2ecc71;
+			}
+
+			#submit { 
+				width: 35%;
+				height: 20%;
+				background-color: transparent;
+				border-radius: 24px;
+				color: white;
+				font-size: 150%;
+				text-align: center;
+				margin: 12% auto;
+				outline: none;
+				border-color: #00BFFF;
+				cursor: pointer;
+				display: block;	
+			}
+
+			#submit:hover {
+				background-color: #00BFFF;
+			}
+
+			.cent {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				align-items: center;
+				text-align: center;
+				vertical-align: middle;
+			}
+
+			#div_seg {
+				width: 80%;
+				height: 40%;
+			}
+
+			#txtAviso {
+				color: white;
+				font-size: 200%;
+				padding: 5%;
+				text-align: center;
+			}
+
+			#grupo {
+				position: absolute;
+				bottom: 2%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				align-items: center;
+				text-align: center;
+			}
+
+
+
+		</style>
+
+		<script type="text/javascript">
+			
+			function validar() {
+
+				var valorN = document.getElementById("nome").value;
+
+				var tamanhoN = valorN.length;
+
+				var espacosN = valorN.split(" ").length - 1;
+
+				var valorE = document.getElementById("email").value;
+
+				var tamanhoE = valorE.length;
+
+				var espacosE = valorE.split(" ").length - 1;
+
+				if (((espacosN > 0) && ((tamanhoN - espacosN) > 5)) && ((espacosE == 0) && (tamanhoE > 3))) {
+					
+					document.getElementById("submit").onclick = 'esconder()';
+					document.getElementById("form_inicio").action = 'jogo.html';
+
+				} else {
+					document.getElementById("submit").onclick = '';
+					document.getElementById("form_inicio").action = '';
+				}
+
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<form class="cent" id="form_inicio" action="" method="post" >
+			<h1 id="txtAviso">DIGITE OS CAMPOS CORRETAMENTE PARA ACESSAR O JOGO</h1>
+			<div class="cent" id="div_seg">
+				<input type="text" placeholder="Digite seu nome completo" name="nome" id="nome" onkeyup="validar()">
+				<input type="email" placeholder="Digite seu e-mail" name="email" id="email" onkeyup="validar()">
+				<input type="submit" value="Enviar" id="submit" onclick="">
+			</div>	
+		</form>
+
+		<p id="grupo">Grupo: Fabiano Mendes, Daniel Nascimento, Álvaro Raimunodo</p>
+
+	</body>
+
+</html>
