@@ -5,6 +5,14 @@
         case 'login':
             include 'includes/login.php';
             break;
+        
+        case 'cadastro':
+            include 'includes/cadastro.php';
+            break;
+        
+        case 'validacao':
+            include 'includes/validacao.php';
+            break;
 
         case 'selecao':
             include 'includes/selecao.php';
