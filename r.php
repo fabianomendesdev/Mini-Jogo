@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="assets/css/login-register.css">
 <title>Criar conta</title>
 </head>
-<body>
+<body class="register">
 	<?php include_once("view/header.html")?>
 	<main>
 		<section class="main-section section-login-register">

@@ -1,11 +1,17 @@
 <?php
 	require_once("includes/connection.php");
-	include_once("view/head.html") 
+	include_once("view/head.html");
+
+	$email =  $_POST['email'] ?? '';
+	$password =  $_POST['password'] ?? '';
+
+	
+
 ?>
 <link rel="stylesheet" href="assets/css/login-register.css">
 <title>Login</title>
 </head>
-<body>
+<body class="login">
 	<?php include_once("view/header.html")?>
 	<main>		
 		<section class="main-section section-login-register">
