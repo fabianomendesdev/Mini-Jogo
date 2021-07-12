@@ -14,6 +14,7 @@
 		$_SESSION['user'] = $data['user'];
 		$_SESSION['email'] = $data['email'];
 		$_SESSION['password'] = $data['password'];
+		unset($_SESSION['errors']);
 		$exp = time() + 60 * 60;
 		setcookie('user', $_SESSION['user'], $exp);
 		header('Location: index.php');
@@ -29,8 +30,8 @@
 			<form class="form-login" action="#" method="post">
 				<p>Login</p>
 
-				<?php if(isset($_SESSION['errors'])): ?>
-					<?php foreach($_SESSION['errors'] as $error): ?>
+				<?php if(isset($_SESSION['errors']['login'])): ?>
+					<?php foreach($_SESSION['errors']['login'] as $error): ?>
 						<p><?= $error ?></p>
 					<?php endforeach?>
 				<?php endif ?>
