@@ -28,6 +28,12 @@
 		<section class="main-section section-login-register">
 			<form class="form-login" action="#" method="post">
 				<p>Login</p>
+
+				<?php if(isset($_SESSION['errors'])): ?>
+					<?php foreach($_SESSION['errors'] as $error): ?>
+						<p><?= $error ?></p>
+					<?php endforeach?>
+				<?php endif ?>
 				
 				<input type="email" placeholder="Digite seu e-mail" name="email">
 				
