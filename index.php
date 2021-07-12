@@ -3,14 +3,6 @@
     $pagina = $_GET['i'] ?? '';
 
     switch($pagina){
-        case 'login':
-            include 'includes/login.php';
-            break;
-        
-        case 'cadastro':
-            include 'includes/cadastro.php';
-            break;
-        
         case 'validacao':
             include 'includes/validacao.php';
             break;

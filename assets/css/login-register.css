@@ -9,7 +9,7 @@
     
 }
 
-.section-login {
+.section-login-register {
     background-color: var(--cor1);
     border: solid 2px var(--cor4);
     border-radius: 24px;
@@ -75,18 +75,22 @@
     cursor: text;
 }
 
-.section-login > .forgotPassword > p{
+.section-login-register > .forgotPassword{
     margin: 5px;
+}
+
+.section-login-register > .forgotPassword > a{
     font-size: 1.1rem;
+    text-decoration: none;
     color: var(--cor3);
 }
 
-.section-login > .forgotPassword > p:hover{
+.section-login-register > .forgotPassword > a:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
-.section-login > .createAccount > button {
+.section-login-register > .createAccount > a > button {
     border: none;
     outline: none;
     color: var(--cor6);
@@ -95,6 +99,6 @@
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);
 }
 
-.section-login > .createAccount > button:hover {
+.section-login-register > .createAccount > a > button:hover {
     cursor: pointer;
 }
