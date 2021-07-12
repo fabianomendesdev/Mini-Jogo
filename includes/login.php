@@ -3,15 +3,22 @@
 	<link rel="stylesheet" href="assets/css/login.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	
-	<div class="container-login">
-		<form class="form-login" action="index.php?i=selecao" method="POST">
-			<p id="txtAviso">Login / <a href="index.php?i=cadastro"> cadastre-se</a></p>
+	<section class="main-section section-login">
+		<form class="form-login" action="#" method="post">
+			<p>Login</p>
 			
-			<input type="email" placeholder="Digite seu e-mail" name="email" id="email" class="inputs">
+			<input type="email" placeholder="Digite seu e-mail" name="email" class="inputs">
 			
-			<input type="text" placeholder="Digite sua senha" name="senha" id="senha" class="inputs">
+			<input type="password" placeholder="Digite sua senha" name="password" class="inputs">
 			
-			<input type="submit" value="Login" id="submit">	
+			<button class="enter">Entrar</button>
 		</form>
-	</div>
+
+		<div class="forgotPassword">
+			<p>Esqueceu a senha?</p>
+		</div>
+		<div class="createAccount">
+			<button>Criar nova conta</button>
+		</div>
+	</section>
 </main>

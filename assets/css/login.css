@@ -1,71 +1,100 @@
 @charset "utf-8";
 
-body{
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
+.form-login{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.container-login{
-    height: 100vh;
+.section-login {
+    background-color: var(--cor1);
+    border: solid 2px var(--cor4);
+    border-radius: 24px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.form-login{
-    width: 50%;
-    min-height: 50vh;
-    background-color: #191919; 
-    border-radius: 24px;
-    border: solid 2px #2ecc71;
+.form-login > p {
+    color: var(--cor3);
+    margin: 10px 0;
+    display: flex;
+    font-size: 1.8rem;
 }
 
-.form-login .inputs{
+.form-login > input[type='email'], input[type='password'] {
     width: 75%;
-    height: 12%;
-    display: block;
+    height: 50px;
     background-color: transparent;
-    font-size: 160%;
+    color: var(--cor6);
     text-align: center;
-    align-items: center;
-    margin: 10% auto;
-    color: white;
     border-radius: 24px;
-    text-align: center;
     outline: none;
     transition: 0.2s;
-    border-color: #2ecc71;
+    border: none;
+    border: 2px solid var(--cor2);
 }
 
-.form-login .inputs:focus {
-    width: 95%;
-    border-color: #00BFFF;
-}
-
-#submit { 
-    width: 35%;
-    height: 10%;
+.form-login > button {
+    height: 50px;
+    border: none;
+    width: 25%;
+    min-width: 100px;
+    border: 2px solid var(--cor3);
     background-color: transparent;
     border-radius: 24px;
-    color: white;
-    font-size: 150%;
-    text-align: center;
-    margin: 12% auto;
-    outline: none;
-    border-color: #00BFFF;
+    color: var(--cor3);
+    
+}
+
+.form-login > input[type='email'], input[type='password'], button {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    transition: 0.5s ease;
+}
+
+.form-login > button:hover {
+    background-color: var(--cor3);
+    color: var(--cor6);
+
     cursor: pointer;
-    display: block;	
 }
 
-#submit:hover {
-    background-color: #00BFFF;
+.form-login > input[type='email']:hover, input[type='password']:hover {
+    border-color: var(--cor4);
+    cursor: pointer;
 }
 
-#txtAviso {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 1.5rem;
+.form-login > input[type='email']:focus, input[type='password']:focus {
+    width: 90%;
+    border-color: var(--cor4);
+    cursor: text;
+}
+
+.section-login > .forgotPassword > p{
+    margin: 5px;
+    font-size: 1.1rem;
+    color: var(--cor3);
+}
+
+.section-login > .forgotPassword > p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-login > .createAccount > button {
+    border: none;
+    outline: none;
+    color: var(--cor6);
+    padding: 5px;
+    background-color: var(--cor3);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);
+}
+
+.section-login > .createAccount > button:hover {
+    cursor: pointer;
 }
