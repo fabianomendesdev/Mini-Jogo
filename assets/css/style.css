@@ -25,10 +25,6 @@ body {
   width: 20%;
   height: 10%;
   background-color: transparent;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
   border-radius: 24px;
   color: white;
   font-size: 150%;
@@ -39,15 +35,7 @@ body {
   position: absolute;
   bottom: -2%;
   left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  -o-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
   align-items: center;
   text-align: center;
 }
@@ -59,6 +47,3 @@ body {
 #btnEnv {
   display: none;
 }
-
-
-
