@@ -102,3 +102,7 @@
 .section-login-register > .createAccount > a > button:hover {
     cursor: pointer;
 }
+
+.form-login > .errorText {
+    font-size: 1.3rem;
+}

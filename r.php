@@ -1,28 +1,28 @@
 <?php
+	session_start();
 	require_once("includes/connection.php");
-	include_once("view/head.html") 
+	include_once("view/head.html");
+	require_once("includes/formValidation.php");
+	try{
+		if(isset($_POST['email'])){
+			$email = $_POST['email'];
+			$queryReturn = $mysqli->query("select email from users where email = '$email'");
+			if($_POST['password'] !== $_POST['passwordRepeat']){
+				throw new FormValidation('As senhas não se batem');
+			} else if (mysqli_num_rows($queryReturn) > 0){
+				throw new FormValidation('Este email já está cadastrado');
+			}
+		}
+	} catch(FormValidation $e){
+		$_SESSION['errors'] = [$e->getMessage()];
+	}
+
+	if(!isset($_SESSION['errors'])){
+		echo "Não teve erros";
+	}
 ?>
 <link rel="stylesheet" href="assets/css/login-register.css">
 <title>Criar conta</title>
-<script>
-	function validation(){
-		alert("entrou")
-		<?php
-			require_once("includes/formValidation.php");
-			try{
-				$email = $_POST['email'];
-				$queryReturn = $mysqli->query("select email from users where email = '$email'");
-				if($_POST['password'] !== $_POST['passwordRepeat']){
-					throw new FormValidation('As senhas não se batem');
-				} else if (mysqli_num_rows($queryReturn) > 0){
-					throw new FormValidation('Este email já está cadastrado');
-				}
-			} catch(FormValidation $e){
-				echo $e->getMessage();
-			}
-		?>
-	}
-</script>
 </head>
 <body class="register">
 	<?php include_once("view/headerLoggedOut.html")?>
@@ -30,10 +30,9 @@
 		<section class="main-section section-login-register">
 			<form class="form-login" action="#" method="post">
 				<p>Criar Conta</p>
-				
 				<?php if(isset($_SESSION['errors'])): ?>
 					<?php foreach($_SESSION['errors'] as $error): ?>
-						<p><?= $error ?></p>
+						<p class="errorText"><?= $error ?></p>
 					<?php endforeach?>
 				<?php endif ?>
 				
@@ -45,7 +44,7 @@
 
 				<input type="password" placeholder="Confirme sua senha" name="passwordRepeat" id="passwordRepeat" max='25' required>
 				
-				<button class="createAccount" onclick="validation()">Criar Conta</button>
+				<button class="createAccount">Criar Conta</button>
 			</form>
 			<div class="createAccount">
 				<a href="login.php"><button>Login</button></a>
