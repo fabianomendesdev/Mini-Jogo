@@ -7,7 +7,7 @@
 <title>Mini-Jogo</title>
 </head>
 <body class="index">
-	<?php include_once("view/header.html")?>
+	<?php include_once("includes/headerLogged.php")?>
 	<main>
 		<section class="main-section section-index">	
 			<form class="form-index" action="#" method="post">

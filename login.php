@@ -23,7 +23,7 @@
 <title>Login</title>
 </head>
 <body class="login">
-	<?php include_once("view/header.html")?>
+	<?php include_once("view/headerLoggedOut.html")?>
 	<main>		
 		<section class="main-section section-login-register">
 			<form class="form-login" action="#" method="post">
