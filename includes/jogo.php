@@ -3,8 +3,8 @@
 ?>
 
 <main>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jogo.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jogo.css">
 
     <div class="container-jogo">
         <form class="formulario">
@@ -66,11 +66,8 @@
                     </div>
                 </div>
 
-               
-
             </div>
-            
-           
+                 
             <div class="div-submit">
                 <input type="submit" value="Enviar" Class="submit">
             </div>

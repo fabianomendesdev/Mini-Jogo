@@ -1,9 +1,18 @@
 <?php
+    require_once 'view/header.html';
     $pagina = $_GET['i'] ?? '';
 
     switch($pagina){
         case 'login':
             include 'includes/login.php';
+            break;
+        
+        case 'cadastro':
+            include 'includes/cadastro.php';
+            break;
+        
+        case 'validacao':
+            include 'includes/validacao.php';
             break;
 
         case 'selecao':
@@ -22,4 +31,5 @@
             header('Status: 301 Moved Permanently', false, 301);
             header('Location: index.php?i=login');
     }
+    require_once 'view/footer.html';
 ?>

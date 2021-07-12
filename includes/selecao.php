@@ -3,6 +3,8 @@
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
 
+	$createTable = "create table if not exists pessoa( id int auto_increment, email varchar(256) not null unique, senha varchar(25) not null, primary key(id) )default charset = 'utf8'";
+	$mysqli->query($createTable) or die ($mysqli->error);
 	$consulta = "select * from pessoa where email = '{$email}' and senha = '{$senha}'";
 	$con = $mysqli->query($consulta) or die ($mysqli->error);
 
@@ -17,8 +19,8 @@
 
 
 <main>
-	<link rel="stylesheet" href="css/selecao.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="assets/css/selecao.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<div class="container-selecao" style="color: white;">
 		
 		<form class="form-selecao" action="index.php?i=jogo" method="POST">
