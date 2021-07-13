@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require("includes/verificationLogged.php");
 	require("includes/formValidation.php");
 	require_once("includes/connection.php");

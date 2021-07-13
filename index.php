@@ -1,4 +1,6 @@
 <?php 
+	session_start();
+	session_regenerate_id();
 	require_once("includes/verificationLoggedOut.php");
 	require_once("includes/connection.php");
 	include_once("view/head.html");
@@ -16,7 +18,6 @@
 				<button value="LC" name="A">Linguagens e Códigos</button>
 				<button value="M" name="A">Matemática</button>
 				<button value="AL" name="A">Aleatório</button>
-
 			</form>
 		</section>
 		</div>

@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     if(isset($_COOKIE['user'])){
         $_SESSION['user'] = $_COOKIE['user'];
     }
