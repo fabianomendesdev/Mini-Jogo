@@ -15,11 +15,11 @@
 				throw new FormValidation('Este email já está cadastrado');
 			}
 			$mysqli->query("insert into users values (DEFAULT, '$user', '$email', '$password')");
-			unset($_SESSION['errors']);
+			unset($Errors['errors']);
 			header('Location: login.php');
 		}
 	} catch(FormValidation $e){
-		$_SESSION['errors'] = ['register' => [$e->getMessage()]];
+		$Errors['errors']['register'] = [$e->getMessage()];
 	}
 ?>
 <link rel="stylesheet" href="assets/css/login-register.css">
@@ -31,8 +31,8 @@
 		<section class="main-section section-login-register">
 			<form class="form-login" action="#" method="post">
 				<p>Criar Conta</p>
-				<?php if(isset($_SESSION['errors']['register'])): ?>
-					<?php foreach($_SESSION['errors']['register'] as $error): ?>
+				<?php if(isset($Errors['errors']['register'])): ?>
+					<?php foreach($Errors['errors']['register'] as $error): ?>
 						<p class="errorText"><?= $error ?></p>
 					<?php endforeach?>
 				<?php endif ?>
