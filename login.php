@@ -17,7 +17,7 @@
 			$_SESSION['email'] = $data['email'];
 			$_SESSION['password'] = $data['password'];
 			$exp = time() + 60 * 60;
-			setcookie('user', $Errors['user'], $exp);
+			setcookie('user', $_SESSION['user'], $exp);
 			session_regenerate_id();
 			unset($Errors['errors']);
 			header('Location: index.php');
