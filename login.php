@@ -46,9 +46,9 @@
 					<?php endforeach?>
 				<?php endif ?>
 				
-				<input type="email" placeholder="Digite seu e-mail" name="email">
+				<input type="email" placeholder="Digite seu e-mail" name="email" value="<?= $_POST['email'] ?? ''?>">
 				
-				<input type="password" placeholder="Digite sua senha" name="password">
+				<input type="password" placeholder="Digite sua senha" name="password" value="<?= $_POST['password'] ?? ''?>">
 				
 				<button class="enter">Entrar</button>
 			</form>
