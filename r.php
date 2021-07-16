@@ -37,13 +37,13 @@
 					<?php endforeach?>
 				<?php endif ?>
 				
-				<input type="text" placeholder="Usuário" name="user" id="user" max='20' required>
+				<input type="text" placeholder="Usuário" name="user" id="user" max='20' value="<?= $_POST['user'] ?? ''?>" required>
 				
-				<input type="email" placeholder="E-mail" name="email" id="email" max='256' required>
+				<input type="email" placeholder="E-mail" name="email" id="email" max='256' value="<?= $_POST['email'] ?? ''?>" required>
 				
-				<input type="password" placeholder="Senha" name="password" id="password" max='25' required>
+				<input type="password" placeholder="Senha" name="password" id="password" max='25' value="<?= $_POST['password'] ?? ''?>" required>
 
-				<input type="password" placeholder="Confirme sua senha" name="passwordRepeat" id="passwordRepeat" max='25' required>
+				<input type="password" placeholder="Confirme sua senha" name="passwordRepeat" id="passwordRepeat" max='25' value="<?= $_POST['passwordRepeat'] ?? ''?>" required>
 				
 				<button class="createAccount">Criar Conta</button>
 			</form>
