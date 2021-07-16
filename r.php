@@ -10,8 +10,11 @@
 			$password = $_POST['password'];
 			$queryReturn = $mysqli->query("select email from users where email = '$email'");
 			if($_POST['password'] !== $_POST['passwordRepeat']){
+				$_POST['password'] = '';
+				$_POST['passwordRepeat'] = '';
 				throw new FormValidation('As senhas não se batem');
 			} else if (mysqli_num_rows($queryReturn) > 0){
+				$_POST['email'] = '';
 				throw new FormValidation('Este email já está cadastrado');
 			}
 			$mysqli->query("insert into users values (DEFAULT, '$user', '$email', '$password')");
